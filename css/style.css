@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&family=Pacifico&family=Patrick+Hand&display=swap");
+
+:root {
+  --cl-russian-violet: #3c1642ff;
+  --cl-blue-sapphire: #086375ff;
+  --cl-caribbean-green: #1dd3b0ff;
+  --cl-green-yellow: #affc41ff;
+  --cl-mint-green: #b2ff9eff;
+  --cl-maximum-purple: #792c85;
+  --cl-black-olive: #313a33;
+  --cl-dark-text-color: #222823;
+  --cl-light-text-color: #f4f3ee;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  color: var(--cl-dark-text-color);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 7rem;
+  line-height: 1.1;
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--cl-mint-green),
+    var(--cl-green-yellow) 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 800px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 5rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--cl-dark-text-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+#navbar {
+  background-color: var(--cl-blue-sapphire);
+  height: 70px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar .logo a {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  color: var(--cl-light-text-color);
+}
+
+#navbar nav ul {
+  display: flex;
+}
+
+#navbar nav ul li a {
+  color: var(--cl-light-text-color);
+  display: block;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 2rem;
+}
+
+#navbar nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background-color: var(--cl-light-text-color);
+  transition: all 0.3s ease;
+}
+
+#navbar nav ul li a:hover::after {
+  width: 100%;
+}
+
+#welcome-section {
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 0 10px;
+  background-color: var(--cl-russian-violet);
+}
+
+#welcome-section .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 5rem auto;
+}
+
+#welcome-section a {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: var(--cl-caribbean-green);
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#welcome-section a:hover {
+  background-color: hsl(168, 76%, 40%);
+}
+
+#welcome-section .welcome-title {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section .welcome-title p {
+  color: var(--cl-light-text-color);
+  font-family: "Patrick Hand", cursive;
+  font-size: 3.5rem;
+}
+
+#projects {
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 0 10px;
+  background-color: var(--cl-mint-green);
+}
+
+#projects .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#projects .project-tile-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 130px;
+}
+
+#projects .project-tile-div a {
+  width: 250px;
+  height: 280px;
+  text-align: center;
+  margin: 0 20px;
+  background-color: var(--cl-russian-violet);
+  color: var(--cl-light-text-color);
+  overflow-y: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px #2228235e;
+  transition: box-shadow 0.3s ease;
+}
+
+#projects .project-tile-div a:hover {
+  box-shadow: 0 5px 50px #22282381;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#projects .project-tile img {
+  display: block;
+  width: 100%;
+  height: 220px;
+}
+
+#projects .project-tile h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  width: fit-content;
+  padding: 20px 0;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#projects .project-tile h3::before,
+#projects .project-tile h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  width: 0;
+  height: 2px;
+  background-color: var(--cl-light-text-color);
+  transition: all 0.3s ease;
+}
+
+#projects .project-tile-div a:hover h3::before {
+  left: 0;
+  width: 50%;
+}
+
+#projects .project-tile-div a:hover h3::after {
+  width: 50%;
+}
+
+#profiles {
+  width: 100vw;
+  height: 90vh;
+  padding: 80px 0 10px;
+  background-color: var(--cl-maximum-purple);
+  color: var(--cl-light-text-color);
+}
+
+#profiles .container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#profiles .profile-links-div {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profiles .profile-link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  color: var(--cl-light-text-color);
+}
+
+#profiles .profile-link a:hover {
+  transform: scale(1.1);
+  background-color: var(--cl-russian-violet);
+}
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  padding: 10px 0;
+  background-color: var(--cl-black-olive);
+  color: var(--cl-light-text-color);
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    width: 500px;
+  }
+
+  #projects {
+    height: auto;
+  }
+
+  #projects .container {
+    padding: 30px 30px 0;
+  }
+
+  #projects .project-tile-div {
+    padding: 50px 0;
+  }
+
+  #projects .project-tile-div a {
+    margin: 0 20px 50px;
+  }
+
+  #profiles .profile-links-div {
+    flex-wrap: wrap;
+    padding: 40px 0 0;
+  }
+
+  #profiles .profile-link a {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    width: 300px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  #navbar {
+    height: 120px;
+  }
+
+  #navbar .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #navbar .logo a {
+    font-size: 3rem;
+  }
+
+  #navbar nav ul {
+    background-color: rgba(34, 40, 35, 0.3);
+    border-radius: 10px;
+    padding: 15px 5px;
+  }
+
+  #welcome-section,
+  #projects,
+  #profiles {
+    padding: 130px 0 10px;
+  }
+
+  #projects .project-tile-div a {
+    margin: 0 5px 50px;
+  }
+}
